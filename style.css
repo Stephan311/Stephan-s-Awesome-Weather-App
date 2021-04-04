@@ -1,6 +1,22 @@
 .hero {
     text-align: center;
-    background-color: blue;
+    background-color:cornflowerblue;
     padding: 20px;
     color: white;
+}
+
+.city, .city1, .city2 {
+    margin-top: 100px;
+    background-color: cornflowerblue;
+    width: fit-content;
+    margin-right: 70px;
+    padding: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    background-color: cornflowerblue;
 }
