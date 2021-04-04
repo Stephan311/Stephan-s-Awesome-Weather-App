@@ -12,6 +12,7 @@ function grabformSubmission() {
     var userInput = document.querySelector("#city").value;
     console.log(userInput);
     localStorage.setItem("Cityname", userInput);
+    $(".subtitle").append("Showing Weather for " + userInput);
 
     //gets weather icon from API
 var Citystring1 = "http://api.openweathermap.org/data/2.5/forecast?q="
@@ -40,13 +41,13 @@ $.getJSON(Citystring1 + Citystring2 + Citystring3, function (data) {
     //5 day forecast gets appeneded into each div block
     //variables for each (day 1 start)
     //day 1
-    var date = data.list[0].dt_txt;
+    var date = data.list[4].dt_txt;
     console.log(date);
-    var temp = data.list[0].main.temp;
+    var temp = data.list[4].main.temp;
     console.log(temp);
-    var humid = data.list[0].main.humidity;
+    var humid = data.list[4].main.humidity;
     console.log(humid);
-    var weathericon = "http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png";
+    var weathericon = "http://openweathermap.org/img/w/" + data.list[4].weather[0].icon + ".png";
     console.log(weathericon);
     $('.date').append(date);
     $('.icon').attr('src', weathericon);
@@ -54,13 +55,13 @@ $.getJSON(Citystring1 + Citystring2 + Citystring3, function (data) {
     $('.humidity').append(humid + "%");
 
     //day 2
-    var date2 = data.list[8].dt_txt;
+    var date2 = data.list[12].dt_txt;
     console.log(date2);
-    var temp2 = data.list[8].main.temp;
+    var temp2 = data.list[12].main.temp;
     console.log(temp2);
-    var humid2 = data.list[8].main.humidity;
+    var humid2 = data.list[12].main.humidity;
     console.log(humid2);
-    var weathericon2 = "http://openweathermap.org/img/w/" + data.list[8].weather[0].icon + ".png";
+    var weathericon2 = "http://openweathermap.org/img/w/" + data.list[12].weather[0].icon + ".png";
     console.log(weathericon2);
     $('.date2').append(date2);
     $('.icon2').attr('src', weathericon2);
@@ -68,13 +69,13 @@ $.getJSON(Citystring1 + Citystring2 + Citystring3, function (data) {
     $('.humidity2').append(humid2 + "%");
 
      //day 3
-     var date3 = data.list[16].dt_txt;
+     var date3 = data.list[20].dt_txt;
      console.log(date3);
-     var temp3 = data.list[16].main.temp;
+     var temp3 = data.list[20].main.temp;
      console.log(temp3);
-     var humid3 = data.list[16].main.humidity;
+     var humid3 = data.list[20].main.humidity;
      console.log(humid3);
-     var weathericon3 = "http://openweathermap.org/img/w/" + data.list[16].weather[0].icon + ".png";
+     var weathericon3 = "http://openweathermap.org/img/w/" + data.list[20].weather[0].icon + ".png";
      console.log(weathericon3);
      $('.date3').append(date3);
      $('.icon3').attr('src', weathericon3);
@@ -82,18 +83,32 @@ $.getJSON(Citystring1 + Citystring2 + Citystring3, function (data) {
      $('.humidity3').append(humid3 + "%");
 
      //day 4
-     var date4 = data.list[24].dt_txt;
+     var date4 = data.list[28].dt_txt;
      console.log(date4);
-     var temp4 = data.list[24].main.temp;
+     var temp4 = data.list[28].main.temp;
      console.log(temp4);
-     var humid4 = data.list[24].main.humidity;
+     var humid4 = data.list[28].main.humidity;
      console.log(humid4);
-     var weathericon4 = "http://openweathermap.org/img/w/" + data.list[24].weather[0].icon + ".png";
+     var weathericon4 = "http://openweathermap.org/img/w/" + data.list[28].weather[0].icon + ".png";
      console.log(weathericon4);
      $('.date4').append(date4);
      $('.icon4').attr('src', weathericon4);
      $('.temp4').append(temp4 + " C");
      $('.humidity4').append(humid4 + "%");
+
+     //day 5
+     var date5 = data.list[36].dt_txt;
+     console.log(date5);
+     var temp5 = data.list[36].main.temp;
+     console.log(temp5);
+     var humid5 = data.list[36].main.humidity;
+     console.log(humid5)
+     var weathericon5 = "http://openweathermap.org/img/w/" + data.list[36].weather[0].icon + ".png";
+     console.log(weathericon5);
+     $('.date5').append(date5);
+     $('.icon5').attr('src', weathericon5);
+     $('.temp5').append(temp5 + " C");
+     $('.humidity5').append(humid5 + "%");
  
  
 
