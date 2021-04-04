@@ -80,6 +80,21 @@ $.getJSON(Citystring1 + Citystring2 + Citystring3, function (data) {
      $('.icon3').attr('src', weathericon3);
      $('.temp3').append(temp3 + " C");
      $('.humidity3').append(humid3 + "%");
+
+     //day 4
+     var date4 = data.list[24].dt_txt;
+     console.log(date4);
+     var temp4 = data.list[24].main.temp;
+     console.log(temp4);
+     var humid4 = data.list[24].main.humidity;
+     console.log(humid4);
+     var weathericon4 = "http://openweathermap.org/img/w/" + data.list[24].weather[0].icon + ".png";
+     console.log(weathericon4);
+     $('.date4').append(date4);
+     $('.icon4').attr('src', weathericon4);
+     $('.temp4').append(temp4 + " C");
+     $('.humidity4').append(humid4 + "%");
+ 
  
 
 
