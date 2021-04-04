@@ -6,11 +6,16 @@
 }
 
 .city, .city1, .city2 {
+    display: inline-block;
     margin-top: 100px;
     background-color: cornflowerblue;
-    width: fit-content;
+    width: 100px;
     margin-right: 10px;
     padding: 80px;
+}
+
+.weather {
+    display: inline-block;
 }
 
 .hidden {
@@ -20,3 +25,19 @@
 .btn {
     background-color: cornflowerblue;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+
+  .grid-container, div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+  }
+
