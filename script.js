@@ -48,9 +48,25 @@ $.getJSON(Citystring1 + Citystring2 + Citystring3, function (data) {
     console.log(humid);
     var weathericon = "http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png";
     console.log(weathericon);
+    $('.date').append(date);
     $('.icon').attr('src', weathericon);
-    $('.temp').append(temp);
-    $('.humidity').append(humid);
+    $('.temp').append(temp +" C");
+    $('.humidity').append(humid + "%");
+
+    //day 2
+    var date2 = data.list[1].dt_txt;
+    console.log(date2);
+    var temp2 = data.list[1].main.temp;
+    console.log(temp2);
+    var humid2 = data.list[1].main.humidity;
+    console.log(humid2);
+    var weathericon2 = "http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png";
+    console.log(weathericon2);
+    $('.date2').append(date2);
+    $('.icon2').attr('src', weathericon2);
+    $('.temp2').append(temp2 + " C");
+    $('.humidity2').append(humid2 + "%");
+
 
 
 
