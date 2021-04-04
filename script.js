@@ -14,23 +14,23 @@ function grabformSubmission() {
     localStorage.setItem("Cityname", userInput);
 
     //gets weather icon from API
-var Citystring1 = "https://api.openweathermap.org/data/2.5/weather?q="
-var Citystring3 = "&units=metric&appid=e7dc909ed8628bd75234061d0f993d99"
+var Citystring1 = "http://api.openweathermap.org/data/2.5/forecast?q="
+var Citystring3 = "&units=metric&appid=321743875c786c01219980579e46cc93"
 var Citystring2 = localStorage.getItem("Cityname");
 var Foo;
 //inserts city into the area of the link so the city appears that is searched for
 Foo = Citystring1 + Citystring2 + Citystring3;
 console.log(Foo);
 // debugger;
-//$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Ottawa&units=metric&appid=e7dc909ed8628bd75234061d0f993d99", function (data) {
+//$.getJSON("http://api.openweathermap.org/data/2.5/forecast?q=Ottawa&units=metric&appid=321743875c786c01219980579e46cc93", function (data) {
 $.getJSON(Citystring1 + Citystring2 + Citystring3, function (data) {
         console.log(data);
 
-    var weathericon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+    var weathericon = "http://openweathermap.org/img/w/" + data.weather[1].icon + ".png";
     //gets tempreture. math.floor takes decimal away from tempreture
     var temp = Math.floor(data.main.temp);
     //gets weather desecription
-    var weather = data.weather[0].main;
+    var weather = data.weather[1].list;
 
     //weather icon displays inside its Div
     $('.icon').attr('src', weathericon);
@@ -42,6 +42,11 @@ $.getJSON(Citystring1 + Citystring2 + Citystring3, function (data) {
 
 });
 }
+
+//logs weather data from new API
+$.getJSON("http://api.openweathermap.org/data/2.5/forecast?q=Ottawa&units=metric&appid=321743875c786c01219980579e46cc93", function(Hi){
+    console.log(Hi);
+})
 
 
 
