@@ -41,3 +41,9 @@
     font-size: 20px;
   }
 
+  .today {
+      float: right;
+      position: absolute;
+      margin-left: 600px;
+  }
+

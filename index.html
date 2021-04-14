@@ -31,21 +31,28 @@
               <input name="cityname" id="city" type="text" autofocus="true" class="city-input" />
               <button type="submit" class="btn" onclick="grabformSubmission()">Find City</button>
             </form>
+            <div>
+            <ul id="searchhistory"></ul>
           </div>
+
+  
     
-        </div>
-    
-        <div class="col-12 col-md-8">
+           <!---Subtitle-->
+        <div class="col-12 col-md-8 today">
           <h2 class="subtitle"><span id="City-search-term"></span></h2>
-          <div id="repos-container" class="list-group"></div>
+          <img class="currenticon">
+          <p class="currentweather"></p>
+          <p class="currenttemp"></p>
+          <p class="currenthumid"></p>
+          <p class="currentwind"></p>
         </div>
       </main>
 
           <!---Search Results Grid-->
         </section>
 
-         <!---Template from W3-->
-        <section class = "weather2">
+         <!---Template from W3 Schools-->
+        <section class = "weather2 hidden">
           <div class="grid-container">
             <div class="item1">
               <p class = "date"></p>
