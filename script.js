@@ -168,13 +168,13 @@ function grabformSubmission() {
     $(".UVIndex").append("UV Index: " + UVindex);
     
     //sets UV Index colors
-    if (UVindex >= 0 || UVindex <= 3 ) {
-        $(".UVIndex").addClass("green")
-    } else if (UVindex >= 3.1 || UVindex <= 5 ) {
+    if (UVindex >= 0 && UVindex <= 3 ) {
+        $(".UVIndex").addClass("green");
+    } else if (UVindex >= 3.1 && UVindex <= 5 ) {
         $(".UVIndex").addClass("yellow") 
-    } else if (UVindex >= 5.1 || UVindex <= 7 ) {
+    } else if (UVindex >= 5.1 && UVindex <= 7 ) {
         $(".UVIndex").addClass("orange") 
-    } else if (UVindex >= 7.1 || UVindex <= 10 ) {
+    } else if (UVindex >= 7.1 && UVindex <= 10 ) {
         $(".UVIndex").addClass("red") 
     } else {
         $(".UVIndex").addClass("purple") 
