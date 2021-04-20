@@ -103,7 +103,7 @@ function grabformSubmission() {
     TaskDiv.textContent = taskRead;
 
     //gets current weather
-    var Currentstring1 = "http://api.openweathermap.org/data/2.5/weather?q="
+    var Currentstring1 = "https://api.openweathermap.org/data/2.5/weather?q="
     var Currentstring3 = "&units=metric&appid=321743875c786c01219980579e46cc93"
     var Currentstring2 = localStorage.getItem("Cityname");
     var Poo;
@@ -117,7 +117,7 @@ function grabformSubmission() {
     $.getJSON(Currentstring1 + Currentstring2 + Currentstring3, function (currentweatha) {
         console.log(currentweatha);
 
-        var currenticon = "http://openweathermap.org/img/w/" + currentweatha.weather[0].icon + ".png";
+        var currenticon = "https://openweathermap.org/img/w/" + currentweatha.weather[0].icon + ".png";
         var currenttemp = currentweatha.main.temp + "C";
         var currentweather = currentweatha.weather[0].main;
         var currenthumid = currentweatha.main.humidity;
@@ -188,7 +188,7 @@ function grabformSubmission() {
 
 
     //gets weather icon from API
-    var Citystring1 = "http://api.openweathermap.org/data/2.5/forecast?q="
+    var Citystring1 = "https://api.openweathermap.org/data/2.5/forecast?q="
     var Citystring3 = "&units=metric&appid=321743875c786c01219980579e46cc93"
     var Citystring2 = localStorage.getItem("Cityname");
     var Foo;
@@ -219,7 +219,7 @@ function grabformSubmission() {
         console.log(temp);
         var humid = data.list[4].main.humidity;
         console.log(humid);
-        var weathericon = "http://openweathermap.org/img/w/" + data.list[4].weather[0].icon + ".png";
+        var weathericon = "https://openweathermap.org/img/w/" + data.list[4].weather[0].icon + ".png";
         console.log(weathericon);
         $(".date").empty();
         $(".temp").empty();
@@ -238,7 +238,7 @@ function grabformSubmission() {
         console.log(temp2);
         var humid2 = data.list[12].main.humidity;
         console.log(humid2);
-        var weathericon2 = "http://openweathermap.org/img/w/" + data.list[12].weather[0].icon + ".png";
+        var weathericon2 = "https://openweathermap.org/img/w/" + data.list[12].weather[0].icon + ".png";
         console.log(weathericon2);
         $(".date2").empty();
         $(".temp2").empty();
@@ -254,7 +254,7 @@ function grabformSubmission() {
         console.log(temp3);
         var humid3 = data.list[20].main.humidity;
         console.log(humid3);
-        var weathericon3 = "http://openweathermap.org/img/w/" + data.list[20].weather[0].icon + ".png";
+        var weathericon3 = "https://openweathermap.org/img/w/" + data.list[20].weather[0].icon + ".png";
         console.log(weathericon3);
         $(".date3").empty();
         $(".temp3").empty();
@@ -270,7 +270,7 @@ function grabformSubmission() {
         console.log(temp4);
         var humid4 = data.list[28].main.humidity;
         console.log(humid4);
-        var weathericon4 = "http://openweathermap.org/img/w/" + data.list[28].weather[0].icon + ".png";
+        var weathericon4 = "https://openweathermap.org/img/w/" + data.list[28].weather[0].icon + ".png";
         console.log(weathericon4);
         $(".date4").empty();
         $(".temp4").empty();
@@ -286,7 +286,7 @@ function grabformSubmission() {
         console.log(temp5);
         var humid5 = data.list[36].main.humidity;
         console.log(humid5)
-        var weathericon5 = "http://openweathermap.org/img/w/" + data.list[36].weather[0].icon + ".png";
+        var weathericon5 = "https://openweathermap.org/img/w/" + data.list[36].weather[0].icon + ".png";
         console.log(weathericon5);
         $(".date5").empty();
         $(".temp5").empty();
@@ -327,7 +327,7 @@ function grabformSubmission() {
 
 
 
-$.getJSON("http://api.openweathermap.org/data/2.5/forecast?q=Ottawa&units=metric&appid=321743875c786c01219980579e46cc93", function (data) {
+$.getJSON("https://api.openweathermap.org/data/2.5/forecast?q=Ottawa&units=metric&appid=321743875c786c01219980579e46cc93", function (data) {
     console.log(data);
 })
 
@@ -354,7 +354,7 @@ function addcity(id) {
     // $.getJSON(Citystring1 + Citystring2 + Citystring3, function (data) {
     //     console.log(data); 
 
-    var Searchstring1 = "http://api.openweathermap.org/data/2.5/forecast?q="
+    var Searchstring1 = "https://api.openweathermap.org/data/2.5/forecast?q="
     var Searchstring3 = "&units=metric&appid=321743875c786c01219980579e46cc93"
     // var Searchstring2 = $(".historyitem").val(searchTermArray[id]);
     var Searchstring2 = searchTermArray[id];
@@ -378,7 +378,7 @@ function addcity(id) {
 
         //gets current weather
         //gets current weather
-    var Hellostring1 = "http://api.openweathermap.org/data/2.5/weather?q="
+    var Hellostring1 = "https://api.openweathermap.org/data/2.5/weather?q="
     var Hellostring3 = "&units=metric&appid=321743875c786c01219980579e46cc93"
     var Hellostring2 = searchTermArray[id];
     var Poo;
@@ -392,7 +392,7 @@ function addcity(id) {
     $.getJSON(Hellostring1 + Hellostring2 + Hellostring3, function (currentweatha) {
         console.log(currentweatha);
 
-        var currenticon = "http://openweathermap.org/img/w/" + currentweatha.weather[0].icon + ".png";
+        var currenticon = "https://openweathermap.org/img/w/" + currentweatha.weather[0].icon + ".png";
         var currenttemp = currentweatha.main.temp + "C";
         var currentweather = currentweatha.weather[0].main;
         var currenthumid = currentweatha.main.humidity;
@@ -467,7 +467,7 @@ function addcity(id) {
         console.log(temp);
         var humid = data.list[4].main.humidity;
         console.log(humid);
-        var weathericon = "http://openweathermap.org/img/w/" + data.list[4].weather[0].icon + ".png";
+        var weathericon = "https://openweathermap.org/img/w/" + data.list[4].weather[0].icon + ".png";
         console.log(weathericon);
         $(".date").empty();
         $(".temp").empty();
@@ -484,7 +484,7 @@ function addcity(id) {
         console.log(temp2);
         var humid2 = data.list[12].main.humidity;
         console.log(humid2);
-        var weathericon2 = "http://openweathermap.org/img/w/" + data.list[12].weather[0].icon + ".png";
+        var weathericon2 = "https://openweathermap.org/img/w/" + data.list[12].weather[0].icon + ".png";
         console.log(weathericon2);
         $(".date2").empty();
         $(".temp2").empty();
@@ -500,7 +500,7 @@ function addcity(id) {
         console.log(temp3);
         var humid3 = data.list[20].main.humidity;
         console.log(humid3);
-        var weathericon3 = "http://openweathermap.org/img/w/" + data.list[20].weather[0].icon + ".png";
+        var weathericon3 = "https://openweathermap.org/img/w/" + data.list[20].weather[0].icon + ".png";
         console.log(weathericon3);
         $(".date3").empty();
         $(".temp3").empty();
@@ -516,7 +516,7 @@ function addcity(id) {
         console.log(temp4);
         var humid4 = data.list[28].main.humidity;
         console.log(humid4);
-        var weathericon4 = "http://openweathermap.org/img/w/" + data.list[28].weather[0].icon + ".png";
+        var weathericon4 = "https://openweathermap.org/img/w/" + data.list[28].weather[0].icon + ".png";
         console.log(weathericon4);
         $(".date4").empty();
         $(".temp4").empty();
@@ -532,7 +532,7 @@ function addcity(id) {
         console.log(temp5);
         var humid5 = data.list[36].main.humidity;
         console.log(humid5)
-        var weathericon5 = "http://openweathermap.org/img/w/" + data.list[36].weather[0].icon + ".png";
+        var weathericon5 = "https://openweathermap.org/img/w/" + data.list[36].weather[0].icon + ".png";
         console.log(weathericon5);
         $(".date5").empty();
         $(".temp5").empty();
